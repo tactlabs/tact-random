@@ -9,7 +9,7 @@ INSTALL_REQUIRES = [
 ]
 
 setuptools.setup(
-    name="tact-random_dev", 
+    name="tact-random", 
     version="0.0.1",
     author="TactLabs",
     author_email="rcharles.samuel99@gmail.com",
