@@ -3,6 +3,10 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+INSTALL_REQUIRES = [
+    'numpy',
+    'pandas',
+]
 
 setuptools.setup(
     name="tact-random_dev", 
@@ -19,6 +23,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    install_requires=INSTALL_REQUIRES,
     python_requires='>=3.6',
     zip_safe=False
 )
