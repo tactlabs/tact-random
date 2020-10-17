@@ -1,30 +1,76 @@
 import os
-from PIL import Image
+import time
 
-class Renamer():
+class Tact_Random():
     """
-        Renamer instance to convert images to user defined format
+        Tact Random instance to perform all random operations. 
+
+        Will be adding more soon
+
+        * Random small data for testing
+        * Indian pincodes
+        * Indian cities
+        * Indian states
+        * Indian Engineering Colleges
+        * Canadian cities
+        * US states
+        * US cities
+        * US Postal Codes
     """
     def __init__(self):
         pass
 
-    def conv_ren(self, folder, form='jpeg', name='test'):
-        """
-            Converts image to format 'form' with the name 'name' in the folder 'folder'
-            Args:
-                folder (string): folder to look in (preferably with all images)
-                form (string): Format to convert to (Default:jpeg)
-                name (string): Name to specify for the image (Default:test) 
-            Returns:
-                None
-        """
-        i = 1
-        for filename in os.listdir(folder):
-            img = Image.open(os.path.join(folder,filename)).convert("RGB")
-            try:
-                s = str(name)+"."+str(i)+str(form)
-                img.save(s, form)
-            except Exception:
-                print("Check if you have the right format going on. JPG is JPEG. File path should be absolute")
-                break
-            i += 1
+    def get_xy_for_math(content):
+    """
+        Find X and Y from the equation y = mx + c
+
+        Input:
+        content:str: String in the form y = mx + c
+
+        Output:
+        xs and ys from the function
+    """
+
+    # Sample : y = 2x + 2; y = mx + c
+    
+    parts = content.split("=")
+    
+    #print(parts)
+    
+    part_left  = parts[0].strip()
+    part_right = parts[1].strip()
+    
+    math_sign = "+"
+    
+    if('+' in part_right):
+        right_parts = part_right.split('+')
+    else: # assume it is minus
+        right_parts = part_right.split('-')
+        math_sign = "-"
+        
+    mx_part = right_parts[0].strip().replace('x', '')
+    c_part  = right_parts[1].strip()
+    
+    m = int(mx_part)
+    c = int(c_part)
+    
+    xs_base = np.random.randint(10, size = 5)
+    ys_base = (m * (xs_base)) + c
+    
+    xs = xs_base
+    ys = ys_base
+    
+    return xs, ys
+
+    def convert_hr_min(seconds): 
+       """  
+        Function to convert seconds to hours and minutes easily
+
+        Input:
+        seconds:int - Number of seconds in int
+
+        Output:
+        Time in Hours and Minutes(if available) in str 
+       """ 
+
+        return time.strftime("%H Hour %M Minute %S Seconds", time.gmtime(seconds)) 
