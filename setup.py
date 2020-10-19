@@ -10,10 +10,10 @@ INSTALL_REQUIRES = [
 
 setuptools.setup(
     name="tact-random", 
-    version="0.0.1",
+    version="0.0.2",
     author="TactLabs",
     author_email="rcharles.samuel99@gmail.com",
-    description="A package to convert and rename images easily",
+    description="Simple package for Random Utils, Datasets and so on",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/tactlabs/tact-random",
