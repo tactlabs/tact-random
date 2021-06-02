@@ -9,10 +9,10 @@ INSTALL_REQUIRES = [
 ]
 
 setuptools.setup(
-    name="tact-random", 
-    version="0.0.2",
+    name="tactrandom",
+    version="0.0.1",
     author="TactLabs",
-    author_email="rcharles.samuel99@gmail.com",
+    author_email="praabindhp@gmail.com",
     description="Simple package for Random Utils, Datasets and so on",
     long_description=long_description,
     long_description_content_type="text/markdown",
